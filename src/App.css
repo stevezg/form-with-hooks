@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 .label {
   margin-bottom: 0%;
@@ -18,27 +19,42 @@
 }
 .checkboxSubText{
   text-align: left;
+  display: flex;
+  font-size: 70%;
+}
+.bold {
+  font-weight: bold;
+    font-size: initial;
 }
 .logo {
-  height: 20vmin;
+  display: flex;
+  align-content: flex-start;
   pointer-events: none;
 }
-
+.container{
+}
 .App-header {
   background-color: white;
-  min-height: 100vh;
-  display: flex;
+  /* margin-top: 4%; */
+  /* margin-bottom: 4%; */
+  /* min-height: 100vh; */
+  /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
-  padding: 5%
-
+  padding: 5%;
+  /* max-width: 70%; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* box-shadow: 0in; */
 }
 
 .App-header-title {
   color: #61dafb;
+  font-weight: 200;
+  font-size: 154%;
 }
 
 @keyframes App-logo-spin {

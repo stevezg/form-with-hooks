@@ -5,21 +5,19 @@ import './App.css'
 
 function App() {
   const { validated, setValidated } = React.useState(false)
-  const handlesubmit = event => {
-    const form = event.currentTarget
-    if (form.checkValididty() === false) {
-      event.preventDefault()
-      event.stopPropagation()
-    }
-    setValidated(true)
+
+  const eventHandler = (e) => {
+    e.preventDefault()
+    console.log(`events were handled ${e.currentTarget}`)
   }
+
   return (
     <div className='container'>
       <div className='App'>
         <header className='App-header'>
           <img src={logo} className='logo' alt='logo' />
           <h1 className='App-header-title'>LET'S GET STARTED</h1>
-          <Form>
+          <Form validated={validated} onSubmit={eventHandler}>
             <Form.Group controlId='businessName'>
               <Form.Label className='label'>Businsess Name</Form.Label>
               <Form.Control type='text' placeholder='Marina Dog Daycare' />
@@ -31,9 +29,9 @@ function App() {
             </Form.Group>
 
             <Form.Group controlId='username'>
-              <Form.Label className='label' />
+              <Form.Label className='label'>Create a Username</Form.Label>
               <Form.Control type='text' placeholder='DogLover' required />
-              <Form.Control.Feedback>Create a Username</Form.Control.Feedback>
+              <Form.Control.Feedback></Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group controlId='password'>
@@ -53,28 +51,28 @@ function App() {
               <Form.Control type='text' placeholder='mydogcare.com' />
             </Form.Group>
 
-            <Form.Group controlId='exampleForm.ControlSelect1'>
+            <Form.Group   controlId='exampleForm.ControlSelect1'>
               <Form.Label className='label'>Type of Business</Form.Label>
               <Form.Control as='select'>
                 <option>Select your Businsess</option>
               </Form.Control>
             </Form.Group>
 
-            <div class='form-group'>
-              <label class='bold label form-label' for='terms'>
+            <div className='form-group'>
+              <label className='bold label form-label' >
                 Terms of Service
               </label>
-              <div class='checkboxSubText form-check'>
+              <div className='checkboxSubText form-check'>
                 <input
                   type='checkbox'
-                  id='privacyPolicy'
-                  class='form-check-input'
+                  id='termsOfService'
+                  className='form-check-input'
                 />
                 <label
                   title=''
                   type='checkbox'
-                  for='privacyPolicy'
-                  class='form-check-label'
+
+                  className='form-check-label'
                 >
                   I have read and I do accept{' '}
                   <a href='https://google.com'>terms of services</a>
@@ -82,21 +80,21 @@ function App() {
               </div>
             </div>
 
-            <div class='form-group'>
-              <label class='bold label form-label' for='privacyPolicy'>
+            <div className='form-group'>
+              <label className='bold label form-label' >
                 Privacy Policy
               </label>
-              <div class='checkboxSubText form-check'>
+              <div className='checkboxSubText form-check'>
                 <input
                   type='checkbox'
                   id='privacyPolicy'
-                  class='form-check-input'
+                  className='form-check-input'
                 />
                 <label
                   title=''
                   type='checkbox'
-                  for='privacyPolicy'
-                  class='form-check-label'
+
+                  className='form-check-label'
                 >
                   I have read and I do accept{' '}
                   <a href='https://google.com'>privacy policy</a>
@@ -104,7 +102,7 @@ function App() {
               </div>
             </div>
 
-            <Button variant='primary' type='submit'>
+            <Button className="regsisterButton" variant='primary' type='submit'>
               REGISTER
             </Button>
           </Form>

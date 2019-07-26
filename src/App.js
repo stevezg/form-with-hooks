@@ -27,17 +27,17 @@ function App() {
           </Form.Group>
 
           <Form.Group controlId='password'>
-            <Form.Label className='label'>Password 6 characters | 1 uppercase | 1 digit</Form.Label>
+            <Form.Label className='label'>Password <span className="subLabel">6 characters | 1 uppercase | 1 digit</span></Form.Label>
             <Form.Control type='password' placeholder='Password' />
           </Form.Group>
 
           <Form.Group controlId='website'>
-            <Form.Label className='label'>Website (optional)</Form.Label>
+            <Form.Label className='label'>Website <span className="subLabel">(optional)</span></Form.Label>
             <Form.Control type='text' placeholder='mydogcare.com' />
           </Form.Group>
 
 <Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Type of Business</Form.Label>
+    <Form.Label className="label" >Type of Business</Form.Label>
     <Form.Control as="select">
     <option>Select your Businsess</option>
     </Form.Control>

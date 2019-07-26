@@ -5,6 +5,16 @@
   margin-bottom: 0%;
   display: flex;
   justify-content: left;
+
+}
+.subLabel {
+  color: grey;
+  font-size: 68%;
+  margin-left: 2%;
+  width: 100%;
+  display: inherit;
+  justify-content: stretch;
+  align-items: center;
 }
 .checkboxSubText{
   text-align: left;

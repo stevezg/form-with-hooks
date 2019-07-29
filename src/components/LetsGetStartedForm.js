@@ -134,9 +134,7 @@ export default function LetsGetStartedForm() {
             />
             <label type='checkbox' className='form-check-label'>
               I have read and I do accept
-              <a className='' href='https://www.steveanderson.club'>
-                privacy policy
-              </a>
+              <a href='https://www.steveanderson.club'> privacy policy</a>
             </label>
           </div>
         </div>

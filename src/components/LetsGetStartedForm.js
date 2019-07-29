@@ -4,7 +4,7 @@ import useForm from './hooks/useForm'
 import validate from '../FormValidationRules'
 
 export default function LetsGetStartedForm() {
-  const {values, handleChange, handleSubmit} = useForm(register, validate)
+  const {values, handleChange, handleSubmit, errors} = useForm(register, validate)
 
   function register() {
     console.log(values)
@@ -18,37 +18,46 @@ export default function LetsGetStartedForm() {
           <label className='label form-label'>Business Name</label>
           <input
             name="name"
-            className='form-control'
+            className={`form-control ${errors.name && 'is-invalid'}`}
             type='text'
             placeholder='Marina Dog Daycare'
             onChange={handleChange}
             value={values.name || ''}
-            required
+
           />
+          {errors.name && (
+              <p className="is-danger">{errors.name}</p>
+          )}
         </div>
         <div className='form-group'>
           <label className='label form-label'>Business Email</label>
           <input
             name="email"
-            className='form-control'
+            className={`form-control ${errors.email && "is-invalid"}`}
             type='text'
-            placeholder=''
+            placeholder='marina@mydogcare.com'
             onChange={handleChange}
             value={values.email || ''}
-            required
+
           />
+                    {errors.email && (
+              <p className="is-danger">{errors.email}</p>
+          )}
         </div>
         <div className='form-group'>
           <label className='label form-label'>Create a Username</label>
           <input
             name="username"
-            className='form-control'
+            className={`form-control ${errors.username && "is-invalid"}`}
             type='text'
             placeholder='DogLover'
             onChange={handleChange}
             value={values.username || ''}
-            required
+
           />
+          {errors.username &&(
+            <p className="is-danger">{errors.username}</p>
+          )}
         </div>
 
         <div className='form-group'>
@@ -60,13 +69,16 @@ export default function LetsGetStartedForm() {
           </label>
           <input
             name="password"
-            className='form-control'
+            className={`form-control ${errors.password && "is-invalid"}`}
             type='text'
             placeholder='Password'
             onChange={handleChange}
             value={values.password || ''}
-            required
+
           />
+          {errors.password && (
+            <p className="is-danger">{errors.password}</p>
+          )}
         </div>
         <div className='form-group'>
           <label className='label form-label'>

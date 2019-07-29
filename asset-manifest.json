@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/simplr/static/css/main.6f8ffa95.chunk.css",
+    "main.js": "/simplr/static/js/main.0179127d.chunk.js",
+    "main.js.map": "/simplr/static/js/main.0179127d.chunk.js.map",
+    "runtime~main.js": "/simplr/static/js/runtime~main.a09440d8.js",
+    "runtime~main.js.map": "/simplr/static/js/runtime~main.a09440d8.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/simplr/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.992b7481.chunk.js": "/simplr/static/js/2.992b7481.chunk.js",
+    "static/js/2.992b7481.chunk.js.map": "/simplr/static/js/2.992b7481.chunk.js.map",
+    "index.html": "/simplr/index.html",
+    "precache-manifest.58d3b5cee5790dbc9485fa7da8d933cb.js": "/simplr/precache-manifest.58d3b5cee5790dbc9485fa7da8d933cb.js",
+    "service-worker.js": "/simplr/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/simplr/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.6f8ffa95.chunk.css.map": "/simplr/static/css/main.6f8ffa95.chunk.css.map"
+  }
+}

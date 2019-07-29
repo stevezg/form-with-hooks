@@ -1,5 +1,4 @@
-import React, {useState, useValidation} from 'react'
-import { Button, Form } from 'react-bootstrap'
+import React from 'react'
 import LetsGetStartedForm from "./components/LetsGetStartedForm"
 import logo from './simplr.png'
 import './App.css'

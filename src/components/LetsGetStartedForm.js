@@ -4,7 +4,14 @@ import useForm from './hooks/useForm'
 import validate from '../FormValidationRules'
 
 export default function LetsGetStartedForm() {
-  const {values, handleChange, handleSubmit, errors, isSubmitting} = useForm(register, validate)
+  const {
+    values,
+    handleChange,
+    handleChangeCheckbox,
+    handleSubmit,
+    errors,
+    isSubmitting
+  } = useForm(register, validate)
 
   function register() {
     console.log(values)
@@ -17,47 +24,41 @@ export default function LetsGetStartedForm() {
         <div className='form-group'>
           <label className='label form-label'>Business Name</label>
           <input
-            name="name"
-            className={`form-control ${errors.name && 'is-invalid'} ${!errors.name && isSubmitting && "is-valid"}`}
+            name='name'
+            className={`form-control ${errors.name &&
+              'is-invalid'} ${!errors.name && isSubmitting && 'is-valid'}`}
             type='text'
             placeholder='Marina Dog Daycare'
             onChange={handleChange}
             value={values.name || ''}
-
           />
-          {errors.name && (
-              <p className="is-danger">{errors.name}</p>
-          )}
+          {errors.name && <p className=' subtext'>{errors.name}</p>}
         </div>
         <div className='form-group'>
           <label className='label form-label'>Business Email</label>
           <input
-            name="email"
-            className={`form-control ${errors.email && "is-invalid"} ${!errors.name && isSubmitting && "is-valid"}`}
+            name='email'
+            className={`form-control ${errors.email &&
+              'is-invalid'} ${!errors.name && isSubmitting && 'is-valid'}`}
             type='text'
             placeholder='marina@mydogcare.com'
             onChange={handleChange}
             value={values.email || ''}
-
           />
-                    {errors.email && (
-              <p className="is-danger">{errors.email}</p>
-          )}
+          {errors.email && <p className=' subtext'>{errors.email}</p>}
         </div>
         <div className='form-group'>
           <label className='label form-label'>Create a Username</label>
           <input
-            name="username"
-            className={`form-control ${errors.username && "is-invalid"} ${!errors.username && isSubmitting && "is-valid"}`}
+            name='username'
+            className={`form-control ${errors.username &&
+              'is-invalid'} ${!errors.username && isSubmitting && 'is-valid'}`}
             type='text'
             placeholder='DogLover'
             onChange={handleChange}
             value={values.username || ''}
-
           />
-          {errors.username &&(
-            <p className="is-danger">{errors.username}</p>
-          )}
+          {errors.username && <p className=' subtext'>{errors.username}</p>}
         </div>
 
         <div className='form-group'>
@@ -68,24 +69,22 @@ export default function LetsGetStartedForm() {
             </span>
           </label>
           <input
-            name="password"
-            className={`form-control ${errors.password && "is-invalid"} ${!errors.email && isSubmitting && "is-valid"}`}
+            name='password'
+            className={`form-control ${errors.password &&
+              'is-invalid'} ${!errors.password && isSubmitting && 'is-valid'}`}
             type='text'
             placeholder='Password'
             onChange={handleChange}
             value={values.password || ''}
-
           />
-          {errors.password && (
-            <p className="feedback-invalid">{errors.password}</p>
-          )}
+          {errors.password && <p className='subtext'>{errors.password}</p>}
         </div>
         <div className='form-group'>
           <label className='label form-label'>
             Website <span className='subLabel'>(Optional)</span>
           </label>
           <input
-            name="website"
+            name='website'
             className='form-control'
             type='text'
             placeholder='mydogcare.com'
@@ -100,7 +99,6 @@ export default function LetsGetStartedForm() {
             type='text'
             placeholder='mydogcare.com'
             onChange={handleChange}
-
           >
             <option>Select your Business</option>
           </select>
@@ -110,14 +108,16 @@ export default function LetsGetStartedForm() {
 
           <div className='checkboxSubText form-check'>
             <input
-              className='form-check-input'
+              name='terms'
+              className={`form-check-input ${errors.terms &&
+                'is-invalid'} ${!errors.terms && isSubmitting && 'is-valid'}`}
               type='checkbox'
-              onChange={(e) => {console.log("changed checkbox")}}
-
+              onChange={handleChangeCheckbox}
+              value={values.terms}
             />
             <label type='checkbox' className='form-check-label'>
               I have read and I do accept
-              <a href='https://www.steveanderson.club'>terms of services</a>
+              <a href='https://www.steveanderson.club'> terms of services</a>
             </label>
           </div>
         </div>
@@ -125,14 +125,18 @@ export default function LetsGetStartedForm() {
           <label className='bold label form-label'>Privacy Policy </label>
           <div className='checkboxSubText form-check'>
             <input
-              className='form-check-input'
+              name='policy'
+              className={`form-check-input ${errors.policy &&
+                'is-invalid'} ${!errors.policy && isSubmitting && 'is-valid'}`}
               type='checkbox'
-              onChange={() => {}}
-
+              onChange={handleChangeCheckbox}
+              value={values.policy}
             />
             <label type='checkbox' className='form-check-label'>
               I have read and I do accept
-              <a href='https://www.steveanderson.club'>privacy policy</a>
+              <a className='' href='https://www.steveanderson.club'>
+                privacy policy
+              </a>
             </label>
           </div>
         </div>

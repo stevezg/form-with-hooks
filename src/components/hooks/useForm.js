@@ -17,6 +17,14 @@ const useForm = (callback, validate) => {
     setIsSubmitting(true)
   }
 
+  const handleChangeCheckbox = event => {
+    event.persist()
+    console.log(event.target.name, event.target.checked)
+    setValues(values => ({
+      ...values,
+      [event.target.name]: event.target.checked
+    }))
+  }
   const handleChange = event => {
     event.persist()
     setValues(values => ({
@@ -27,6 +35,7 @@ const useForm = (callback, validate) => {
 
   return {
     handleChange,
+    handleChangeCheckbox,
     handleSubmit,
     values,
     errors,

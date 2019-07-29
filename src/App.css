@@ -8,6 +8,14 @@
   justify-content: left;
 
 }
+.subtext{
+  font-size: 65%;
+  text-align: left;
+  width: 100%;
+    margin-top: 0.25rem;
+
+    color: #dc3545;
+}
 .subLabel {
   color: grey;
   font-size: 68%;
@@ -31,7 +39,8 @@
   align-content: flex-start;
   pointer-events: none;
 }
-.container{
+.form-check-label{
+  color: inherit;
 }
 .App-header {
   background-color: white;
